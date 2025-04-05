@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delta CLI - Dokümantasyon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/docs.css">
+    <link rel="stylesheet" href="../css/scrollbar.css">
+</head>
+<body>
+    <div class="animated-line">
+        <div class="line-path"></div>
+        <div class="line-path"></div>
+        <div class="line-path"></div>
+    </div>
+    
+    <div class="sketchy-path">
+        <svg viewBox="0 0 1200 3000" preserveAspectRatio="none">
+            <path class="sketchy-line" d="M600,0 C550,300 650,600 550,900 C450,1200 650,1500 550,1800 C450,2100 650,2400 600,2700 C550,3000 650,3300 600,3600" />
+            
+            <path class="sketchy-line" d="M650,0 C600,350 700,700 620,1050 C540,1400 740,1750 640,2100 C540,2450 720,2800 670,3150" style="stroke-width: 1; opacity: 0.7;" />
+            
+            <path class="sketchy-line" d="M580,0 C530,400 630,800 530,1200 C430,1600 630,2000 530,2400 C430,2800 630,3200 580,3600" style="stroke-width: 1.5; stroke-dasharray: 5, 15;" />
+        </svg>
+    </div>
+
+    <nav>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="/" class="logo">
+                    <span class="delta-symbol">δ</span>
+                    <span>Delta CLI</span>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="../">Ana Sayfa</a></li>
+                    <li><a href="/#features">Özellikler</a></li>
+                    <li><a href="/#commands">Komutlar</a></li>
+                    <li><a href="/#download">İndir</a></li>
+                    <li><a href="https://github.com/e500ky" class="github-link" target="_blank">
+                        <i class='bx bxl-github'></i>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="docs-container">
+        <aside class="docs-sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-section">
+                    <h3>Başlangıç</h3>
+                    <ul>
+                        <li><a href="#getting-started">Hızlı Başlangıç</a></li>
+                        <li><a href="#installation">Kurulum</a></li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar-section">
+                    <h3>Temel Komutlar</h3>
+                    <ul>
+                        <li><a href="#system-commands">Sistem Komutları</a></li>
+                        <li><a href="#network-commands">Ağ Komutları</a></li>
+                        <li><a href="#dev-commands">Geliştirici Komutları</a></li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <main class="docs-content">
+            <section id="getting-started" class="doc-section">
+                <h1>Delta CLI Dokümantasyonu</h1>
+                <div class="doc-block">
+                    <h2>Hızlı Başlangıç</h2>
+                    <p>Delta CLI, modern bir terminal deneyimi sunan güçlü bir komut satırı aracıdır. Python tabanlı bu araç, sistem yönetimi, ağ tarama ve geliştirici araçlarını tek bir arayüzde birleştirir.</p>
+                    
+                    <div class="warning-block">
+                        <i class='bx bx-error'></i>
+                        <p>Delta CLI'yi kullanmak için Python 3.8 veya üstü gereklidir.</p>
+                    </div>
+
+                    <h3>Hızlı Kurulum</h3>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="language">bash</span>
+                            <button class="copy-btn" onclick="copyCode(this)">
+                                <i class='bx bx-copy'></i>
+                            </button>
+                        </div>
+                        <pre><code>pip install delta-cli</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section id="installation" class="doc-section">
+                <div class="doc-block">
+                    <h2>Detaylı Kurulum</h2>
+                    <p>Delta CLI'yi farklı platformlarda kurma yöntemleri aşağıda açıklanmıştır:</p>
+
+                    <h3>Windows</h3>
+                    <p>Windows için birkaç farklı kurulum yöntemi mevcuttur:</p>
+
+                    <h4>1. Winget ile Kurulum</h4>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="language">powershell</span>
+                            <button class="copy-btn" onclick="copyCode(this)">
+                                <i class='bx bx-copy'></i>
+                            </button>
+                        </div>
+                        <pre><code>winget install delta-cli</code></pre>
+                    </div>
+
+                    <h4>2. Python pip ile Kurulum</h4>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="language">powershell</span>
+                            <button class="copy-btn" onclick="copyCode(this)">
+                                <i class='bx bx-copy'></i>
+                            </button>
+                        </div>
+                        <pre><code>pip install delta-cli</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <section id="system-commands" class="doc-section">
+                <div class="doc-block">
+                    <h2>Sistem Komutları</h2>
+                    <p>Delta CLI'nin sistem izleme ve yönetimi için sunduğu komutlar:</p>
+
+                    <h3>CPU İzleme</h3>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="language">bash</span>
+                            <button class="copy-btn" onclick="copyCode(this)">
+                                <i class='bx bx-copy'></i>
+                            </button>
+                        </div>
+                        <pre><code>system -cpu</code></pre>
+                    </div>
+                    <p>CPU kullanımını çekirdek bazında görüntüler.</p>
+
+                    <h3>RAM İzleme</h3>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="language">bash</span>
+                            <button class="copy-btn" onclick="copyCode(this)">
+                                <i class='bx bx-copy'></i>
+                            </button>
+                        </div>
+                        <pre><code>system -ram</code></pre>
+                    </div>
+                    <p>RAM kullanımını detaylı olarak gösterir.</p>
+                </div>
+            </section>
+
+            <section id="network-commands" class="doc-section">
+                <div class="doc-block">
+                    <h2>Ağ Komutları</h2>
+                    <p>Ağ tarama ve analiz işlemleri için kullanılan komutlar:</p>
+
+                    <h3>Ağ Tarama</h3>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="language">bash</span>
+                            <button class="copy-btn" onclick="copyCode(this)">
+                                <i class='bx bx-copy'></i>
+                            </button>
+                        </div>
+                        <pre><code>scan -network</code></pre>
+                    </div>
+                    <p>Yerel ağdaki tüm cihazları tarar ve listeler.</p>
+
+                    <div class="info-block">
+                        <i class='bx bx-info-circle'></i>
+                        <p>Bu komut yönetici izni gerektirebilir.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="dev-commands" class="doc-section">
+                <div class="doc-block">
+                    <h2>Geliştirici Komutları</h2>
+                    <p>Git, Docker ve diğer geliştirme araçları için komutlar:</p>
+
+                    <h3>Git Komutları</h3>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="language">bash</span>
+                            <button class="copy-btn" onclick="copyCode(this)">
+                                <i class='bx bx-copy'></i>
+                            </button>
+                        </div>
+                        <pre><code>dev -git status</code></pre>
+                    </div>
+                    <p>Git deposunun durumunu kontrol eder.</p>
+
+                    <h3>Docker Komutları</h3>
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="language">bash</span>
+                            <button class="copy-btn" onclick="copyCode(this)">
+                                <i class='bx bx-copy'></i>
+                            </button>
+                        </div>
+                        <pre><code>dev -docker ps</code></pre>
+                    </div>
+                    <p>Çalışan Docker konteynerlerini listeler.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div class="blob docs-blob-1"></div>
+    <div class="blob docs-blob-2"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/docs.js"></script>
+</body>
+</html>

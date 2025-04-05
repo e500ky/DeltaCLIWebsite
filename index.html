@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delta CLI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/scrollbar.css">
+</head>
+<body>
+    <div class="animated-line">
+        <div class="line-path"></div>
+        <div class="line-path"></div>
+        <div class="line-path"></div>
+    </div>
+    
+    <div class="sketchy-path">
+        <svg viewBox="0 0 1200 3000" preserveAspectRatio="none">
+            <path class="sketchy-line" d="M600,0 C550,300 650,600 550,900 C450,1200 650,1500 550,1800 C450,2100 650,2400 600,2700 C550,3000 650,3300 600,3600" />
+            
+            <path class="sketchy-line" d="M650,0 C600,350 700,700 620,1050 C540,1400 740,1750 640,2100 C540,2450 720,2800 670,3150" style="stroke-width: 1; opacity: 0.7;" />
+            
+            <path class="sketchy-line" d="M580,0 C530,400 630,800 530,1200 C430,1600 630,2000 530,2400 C430,2800 630,3200 580,3600" style="stroke-width: 1.5; stroke-dasharray: 5, 15;" />
+        </svg>
+    </div>
+    
+    <header>
+        <nav>
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="#" class="logo">
+                        <span class="delta-symbol">δ</span>
+                        <span>Delta CLI</span>
+                    </a>
+                    <ul class="nav-menu">
+                        <li><a href="./docs/">Dokümantasyon</a></li>
+                        <li><a href="#features">Özellikler</a></li>
+                        <li><a href="#commands">Komutlar</a></li>
+                        <li><a href="#download">İndir</a></li>
+                        <li><a href="https://github.com/e500ky" class="github-link" target="_blank">
+                            <i class='bx bxl-github'></i>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hero">
+            <div class="container">
+                <div class="hero-wrapper">
+                    <div class="hero-content">
+                        <h1>Modern <span>Terminal</span> Deneyimi</h1>
+                        <p>Sistem yönetimi, geliştirme ve network araçlarını tek bir komut satırında birleştiren güçlü ve minimal CLI uygulaması.</p>
+                        <div class="hero-actions">
+                            <a href="#download" class="btn primary">Hemen İndir</a>
+                            <a href="#commands" class="btn secondary">Komutları Keşfet</a>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <div class="stat-value">20+</div>
+                                <div class="stat-label">Komut</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">3</div>
+                                <div class="stat-label">Platform</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-value">Ücretsiz</div>
+                                <div class="stat-label">Açık Kaynak</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-terminal">
+                        <div class="terminal">
+                            <div class="terminal-header">
+                                <div class="dots">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
+                                <div class="terminal-title">Delta CLI</div>
+                            </div>
+                            <div class="terminal-body">
+                                <div class="command-line">
+                                    <span class="prompt">[</span>
+                                    <span class="host-info">192.168.42.174</span>
+                                    <span class="prompt">]</span>
+                                    <span class="path-info">'C:\Users\DELTA'</span>
+                                    <span class="prompt">(</span>
+                                    <span class="user-info">DELTA@delta</span>
+                                    <span class="prompt">) $</span>
+                                    <span class="command">help</span>
+                                </div>
+                                <div class="output">Available commands:
+ ● system   : Sistem kaynaklarını izler ve yönetir.
+ ● files    : Dosya yönetimi işlemleri yapar.
+ ● dev      : Geliştirici araçları.
+ ● scan     : Ağ tarama işlemleri için komut.
+...
+                                </div>
+                                <div class="command-line">
+                                    <span class="prompt">[</span>
+                                    <span class="host-info">192.168.42.174</span>
+                                    <span class="prompt">]</span>
+                                    <span class="path-info">'C:\Users\DELTA'</span>
+                                    <span class="prompt">(</span>
+                                    <span class="user-info">DELTA@delta</span>
+                                    <span class="prompt">) $</span>
+                                    <span class="command">system -cpu</span>
+                                </div>
+                                <div class="output">CPU Kullanımı:
+Core 0: 25%
+Core 1: 30%
+Core 2: 15%
+Core 3: 45%
+                                </div>
+                                <div class="command-line active">
+                                    <span class="prompt">[</span>
+                                    <span class="host-info">192.168.42.174</span>
+                                    <span class="prompt">]</span>
+                                    <span class="path-info">'C:\Users\DELTA'</span>
+                                    <span class="prompt">(</span>
+                                    <span class="user-info">DELTA@delta</span>
+                                    <span class="prompt">) $</span>
+                                    <span class="command"></span>
+                                    <span class="cursor"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blob hero-blob"></div>
+            <!-- Ek blob'lar ekleniyor -->
+            <div class="blob blob-small blob-top-right"></div>
+        </div>
+    </header>
+
+    <section id="features" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Temel Özellikler</h2>
+                <p>Delta CLI ile neler yapabilirsiniz?</p>
+            </div>
+            <div class="features-grid">
+                <!-- Her kartın görünür olması için açıkça style belirtme -->
+                <div class="feature-card" style="opacity: 1; transform: translateY(0);">
+                    <i class='bx bx-chip feature-icon'></i>
+                    <h3>Sistem İzleme</h3>
+                    <p>Bilgisayarınızın CPU, RAM ve disk kullanımını gerçek zamanlı izleyin.</p>
+                    <div class="feature-example">
+                        <code>system -cpu</code>
+                    </div>
+                </div>
+                <div class="feature-card" style="opacity: 1; transform: translateY(0);">
+                    <i class='bx bx-globe feature-icon'></i>
+                    <h3>Ağ Tarama</h3>
+                    <p>Yerel ağınızı ve açık portları güvenli bir şekilde tarayın.</p>
+                    <div class="feature-example">
+                        <code>scan -network</code>
+                    </div>
+                </div>
+                <div class="feature-card" style="opacity: 1; transform: translateY(0);">
+                    <i class='bx bx-code-alt feature-icon'></i>
+                    <h3>Geliştirici Araçları</h3>
+                    <p>Git ve Docker entegrasyonu ile geliştirme iş akışınızı hızlandırın.</p>
+                    <div class="feature-example">
+                        <code>dev -git status</code>
+                    </div>
+                </div>
+                <div class="feature-card" style="opacity: 1; transform: translateY(0);">
+                    <i class='bx bx-code-curly feature-icon'></i>
+                    <h3>Proje Oluşturma</h3>
+                    <p>Yeni Python ve web projeleri hızlı bir şekilde oluşturun.</p>
+                    <div class="feature-example">
+                        <code>new -py myproject</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blob feature-blob"></div>
+        <!-- Ek bir blob daha -->
+        <div class="blob blob-small blob-mid-left"></div>
+    </section>
+
+    <section id="commands" class="section alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Komut Kılavuzu</h2>
+                <p>En sık kullanılan komutlar ve açıklamaları</p>
+            </div>
+            <div class="commands-wrapper">
+                <div class="command-tabs">
+                    <button class="tab-btn active" data-tab="system">Sistem</button>
+                    <button class="tab-btn" data-tab="network">Ağ</button>
+                    <button class="tab-btn" data-tab="dev">Geliştirici</button>
+                </div>
+                <div class="command-content">
+                    <div class="tab-content active" id="system-tab">
+                        <div class="command-demo">
+                            <div class="code">system -ram</div>
+                            <div class="description">RAM kullanımını görüntüler</div>
+                        </div>
+                        <div class="command-demo">
+                            <div class="code">system -cpu</div>
+                            <div class="description">CPU kullanımını görüntüler</div>
+                        </div>
+                        <div class="command-demo">
+                            <div class="code">system -disk</div>
+                            <div class="description">Disk kullanımını görüntüler</div>
+                        </div>
+                        <div class="command-demo">
+                            <div class="code">system -processes</div>
+                            <div class="description">Çalışan işlemleri listeler</div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="network-tab">
+                        <div class="command-demo">
+                            <div class="code">scan -network</div>
+                            <div class="description">Yerel ağdaki tüm cihazları tarar</div>
+                        </div>
+                        <div class="command-demo">
+                            <div class="code">scan -port @localhost</div>
+                            <div class="description">Localhost'taki açık portları tarar</div>
+                        </div>
+                        <div class="command-demo">
+                            <div class="code">ping 192.168.1.1</div>
+                            <div class="description">Belirtilen IP adresine ping gönderir</div>
+                        </div>
+                        <div class="command-demo">
+                            <div class="code">self -info -ip</div>
+                            <div class="description">Kendi IP adresinizi görüntüler</div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="dev-tab">
+                        <div class="command-demo">
+                            <div class="code">dev -git status</div>
+                            <div class="description">Git deposunun durumunu görüntüler</div>
+                        </div>
+                        <div class="command-demo">
+                            <div class="code">dev -docker ps</div>
+                            <div class="description">Çalışan Docker konteynerlerini listeler</div>
+                        </div>
+                        <div class="command-demo">
+                            <div class="code">dev -note add "Yapılacak işler"</div>
+                            <div class="description">Yeni bir not ekler</div>
+                        </div>
+                        <div class="command-demo">
+                            <div class="code">new -py myproject</div>
+                            <div class="description">Yeni bir Python projesi oluşturur</div>
+                        </div>
+                        <div class="command-demo">
+                            <div class="code">open .</div>
+                            <div class="description">Mevcut dizini VS Code'da açar</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blob command-blob"></div>
+    </section>
+
+    <section id="download" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Hemen İndirin</h2>
+                <p>İşletim sisteminiz için uygun sürümü seçin</p>
+            </div>
+            <div class="download-options">
+                <a href="#" class="download-card">
+                    <i class='bx bxl-windows'></i>
+                    <h3>Windows</h3>
+                    <span class="version">v1.0.0</span>
+                    <span class="download-btn">İndir</span>
+                </a>
+            </div>
+        </div>
+        <div class="blob download-blob"></div>
+        <!-- Ek bir blob daha -->
+        <div class="blob blob-small blob-bottom-right"></div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-branding">
+                    <a href="#" class="logo">
+                        <span class="delta-symbol">δ</span>
+                        <span>Delta CLI</span>
+                    </a>
+                    <p>Modern terminal deneyimi.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Bağlantılar</h4>
+                    <ul>
+                        <li><a href="#features">Özellikler</a></li>
+                        <li><a href="#commands">Komutlar</a></li>
+                        <li><a href="#download">İndir</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Kaynaklar</h4>
+                    <ul>
+                        <li><a href="./docs/">Dokümantasyon</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Katkıda Bulun</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 Delta CLI. Tüm hakları saklıdır.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Kütüphaneleri -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
+    
+    <!-- Three.js hata verdiği için şimdilik kaldırıldı -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.159.0/three.min.js"></script> -->
+    
+    <!-- Terminal 3D JavaScript -->
+    <!-- <script src="js/terminal3d.js"></script> -->
+    
+    <!-- Kendi JavaScript Dosyamız -->
+    <script src="js/main.js"></script>
+</body>
+</html>

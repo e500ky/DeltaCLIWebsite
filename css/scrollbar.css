@@ -1,0 +1,6 @@
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
